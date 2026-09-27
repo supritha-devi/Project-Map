@@ -1,0 +1,209 @@
+/* ============================================================
+   Project City - styles.css
+   ============================================================ */
+
+:root {
+  --caramel: #A0522D;
+  --caramel-light: #C68642;
+  --bg: #FDFBF7;
+  --card: #FFFFFF;
+  --text: #2B221A;
+  --muted: #8a7a6d;
+  --gray: #E5E1DA;
+
+  --cream: #F5EBE6;
+  --rose: #E3A89F;
+  --sage: #B9C4A6;
+  --olive: #8A9A74;
+  --earth-grey: #D6D2C4;
+}
+
+body.dark-mode {
+  --bg: #1A1613;
+  --card: #26201B;
+  --text: #F5EBE0;
+  --gray: #3A3128;
+  --muted: #B0A28F;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* ---------------- Auth page ---------------- */
+.auth-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #FDFBF7 0%, #F3EDE0 100%);
+}
+.auth-card {
+  background: var(--card);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+  width: 380px;
+  text-align: center;
+}
+.auth-title { margin: 0 0 8px 0; color: var(--caramel); font-weight: 700; }
+.auth-subtitle { color: var(--muted); margin-bottom: 20px; }
+
+/* ---------------- Top bar ---------------- */
+.topbar {
+  background: var(--bg);
+  border-bottom: 2px solid var(--caramel);
+  padding: 14px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.brand {
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--caramel);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.brand .dot {
+  width: 10px; height: 10px; border-radius: 50%;
+  background: var(--caramel-light);
+  display: inline-block;
+}
+.navlinks { display: flex; gap: 22px; }
+.navlink {
+  color: var(--muted) !important;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none !important;
+}
+.project-switch-wrap { display: flex; align-items: center; gap: 10px; }
+
+/* ---------------- Buttons ---------------- */
+.btn-caramel {
+  background: var(--caramel);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-weight: 600;
+}
+.btn-caramel:hover { background: var(--caramel-light); color: white; }
+.btn-outline-caramel {
+  background: transparent;
+  color: var(--caramel);
+  border: 1px solid var(--caramel);
+  border-radius: 8px;
+  padding: 7px 15px;
+  font-weight: 600;
+}
+
+/* ---------------- Page layout ---------------- */
+.page-container { padding: 10px 0 60px 0; }
+.content { max-width: 820px; margin: 0 auto; padding: 12px 28px; }
+.page-header { display: flex; justify-content: space-between; align-items: center; }
+.section-title {
+  font-size: 14px; text-transform: uppercase; letter-spacing: 0.04em;
+  color: var(--muted); margin: 18px 0 10px 0;
+}
+.section {
+  background: var(--card);
+  border: 1px solid var(--gray);
+  border-left: 4px solid var(--caramel-light);
+  border-radius: 10px;
+  padding: 18px 20px;
+  margin-bottom: 18px;
+}
+.callout-coral { background: var(--rose); color: #5c2e28; padding: 10px 14px; border-radius: 8px; }
+.recent-row { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px solid var(--gray); }
+.badge-small { font-size: 11px; color: var(--muted); }
+
+/* ---------------- City map ---------------- */
+.map-wrap {
+  position: relative;
+  min-height: 480px;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid var(--gray);
+  margin: 16px 0;
+  background:
+    radial-gradient(circle at 15% 20%, #EDE6D8 0%, transparent 30%),
+    radial-gradient(circle at 80% 15%, #E3DCCB 0%, transparent 28%),
+    radial-gradient(circle at 70% 75%, #EDE6D8 0%, transparent 32%),
+    radial-gradient(circle at 20% 80%, #E3DCCB 0%, transparent 30%),
+    linear-gradient(135deg, #F7F2E9 0%, #F3EDE0 100%);
+}
+.empty-state { text-align: center; padding: 80px 20px; color: var(--muted); }
+.empty-icon { font-size: 40px; margin-bottom: 10px; }
+
+.district-card {
+  position: absolute;
+  width: 200px;
+  background: var(--card);
+  border-radius: 12px;
+  padding: 14px 16px;
+  box-shadow: 0 4px 16px rgba(43,34,26,0.12);
+  border-top: 4px solid var(--caramel-light);
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.district-card:hover { transform: translateY(-4px); box-shadow: 0 10px 24px rgba(43,34,26,0.2); }
+.d-title { font-size: 14px; font-weight: 700; margin-bottom: 4px; }
+.d-snippet { font-size: 12px; color: var(--muted); margin-bottom: 10px; }
+.d-row { display: flex; justify-content: space-between; align-items: center; }
+.badge {
+  font-size: 11px; font-weight: 600; padding: 3px 9px; border-radius: 20px; color: #33302a;
+}
+.checklist-tag { font-size: 11px; color: var(--muted); font-weight: 600; }
+
+/* ---------------- District Detail ---------------- */
+.breadcrumb { color: var(--muted); font-size: 13px; margin-bottom: 6px; }
+.header-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
+
+.check-item { display: flex; align-items: center; gap: 10px; padding: 6px 0; border-bottom: 1px solid var(--gray); }
+.check-item.done span { text-decoration: line-through; color: var(--muted); }
+.delete-x { margin-left: auto; cursor: pointer; color: var(--muted); font-weight: bold; }
+.add-row { display: flex; gap: 8px; margin-top: 10px; }
+
+/* ---------------- Notes (earthy palette - scoped here only) ---------------- */
+.notes-panel-wrap .notes-filter { margin-bottom: 10px; }
+.notes-panel {
+  background: var(--cream);
+  border: 1px solid #EADFD4;
+  border-radius: 12px;
+  padding: 14px;
+}
+.note-entry {
+  background: rgba(255,255,255,0.7);
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin-bottom: 10px;
+  border-left: 5px solid var(--earth-grey);
+  font-size: 13.5px;
+}
+.note-entry .tag {
+  display: inline-block;
+  font-size: 10.5px; font-weight: 700; text-transform: uppercase;
+  padding: 2px 9px; border-radius: 20px; margin-bottom: 6px;
+}
+.note-entry .time { float: right; font-size: 11px; color: var(--muted); }
+.add-note-row { margin-top: 12px; display: flex; flex-direction: column; gap: 8px; }
+
+/* ---------------- Resources ---------------- */
+.resource-row {
+  background: #FBF8F2; border: 1px solid var(--gray); border-radius: 8px;
+  padding: 8px 12px; margin-bottom: 6px; font-size: 13px;
+}
+.resource-actions { display: flex; flex-direction: column; gap: 8px; margin-top: 10px; }
+
+/* ---------------- Activity ---------------- */
+.activity-item { font-size: 13px; color: var(--muted); padding: 6px 0; border-bottom: 1px solid var(--gray); }
+.activity-item .when { float: right; color: #a89a8c; }
+
+.disabled-note { font-size: 12px; color: var(--muted); font-style: italic; }
