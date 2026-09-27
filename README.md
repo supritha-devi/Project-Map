@@ -47,10 +47,15 @@ Project City is a local, offline application that helps you organize, visualize,
 ##How to Use
 
 -Create an Account or Login
+
 -After login, you will see your Project City Map
+
 -Use the left sidebar to:
+
 -Select a district
+
 -Edit title and description
+
 -Update progress status
 
 ##<img width="720" height="1338" alt="image" src="https://github.com/user-attachments/assets/1786da4f-1bc4-487d-ba7d-10222263d47b" />
