@@ -37,19 +37,6 @@ Project City is a local, offline application that helps you organize, visualize,
 
 ---
 
-## Project Structure
-
-digital-garden-app/
-├── app.R                 # Main entry point
-├── global.R              # Database setup & helpers
-├── ui.R                  # User interface
-├── server.R              # Application logic
-├── www/
-│   ├── styles.css        # Custom styles
-│   └── city_map_bg.png   # City map background
-└── data/                 # Database & exported files (auto-created)
-text
----
 
 ## Installation & Setup
 
@@ -79,12 +66,17 @@ text
 ##Future Improvements
 
 -Multiple projects per user
+
 -Custom district creation
+
 -Dark mode
+
 -Visual road connections between districts
+
 -Drag and drop positioning of districts
 
 ##Author
+
 Name : SUPRITHADEVI M
 
 
